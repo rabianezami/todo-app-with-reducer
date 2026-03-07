@@ -1,13 +1,19 @@
 
 import './App.css'
-import TodoApp from './TodoApp'
+import { TodoProvider } from './context/TodoContext'
+import TodoInput from "./components/TodoInput"
+import TodoList from "./components/TodoList"
+
 
 function App() {
 
   return (
-    <>
-      <TodoApp />
-    </>
+    <TodoProvider>
+      <h1>Todo App</h1>
+
+      <TodoInput />
+      <TodoList />
+    </TodoProvider>
   )
 }
 
